@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Gaegu&family=Open+Sans&display=swap");
 
 body {
-  background-color: #31343a;
+  background: radial-gradient(circle, rgba(48,48,48,1) 0%, rgba(22,22,22,1) 88%, rgba(0,0,0,1) 100%);
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: white;
