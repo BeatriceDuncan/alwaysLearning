@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Gaegu&family=Open+Sans&display=swap");
+
+body {
+  background-color: #31343a;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: 'Gaegu', cursive;
+}
+
+ul {
+  line-height: 2;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: lightblue;
+}
