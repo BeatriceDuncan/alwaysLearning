@@ -14,7 +14,20 @@ h1 {
 }
 
 h2 {
+  color: lavenderblush;
+}
+
+h2,
+h3 {
   font-family: 'Gaegu', cursive;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: powderblue;
+  margin-top: 60px;
 }
 
 ul {
@@ -28,5 +41,5 @@ a {
 }
 
 a:visited {
-  color: lightblue;
+  color: blanchedalmond;
 }

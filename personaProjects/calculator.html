@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+
+  <h1>SIMPLE CALCULATOR</h1>
+
+  <div class="calculator">
+    <input type="text" class="num1" placeholder="0" onchange=doMath()>
+    <div class="operations">
+      <button class="add button">➕</button>
+      <button class="subtract button">➖</button>
+      <button class="multiply button">✖️</button>
+      <button class="divide button">➗</button>
+    </div>
+    <input type="text" class="num2" placeholder="0" onchange=doMath()>
+    <h2>=</h2><h2 class="answer"></h2><h2 class="alert"></h2>
+  </div>
+
+  <style>
+    * {
+      font-family: "Helvetica";
+    }
+
+    h1 {
+      margin: 0 auto;
+      width: 70%;
+      text-align: center;
+      color: springgreen;
+      margin-top: 80px;
+    }
+
+    .calculator {
+      width: 70%;
+      height: 130px;
+      margin: 30px 80px auto;
+      border: 3px solid springgreen;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 30px;
+    }
+
+    button,
+    input {
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      font-size: 120%;
+      background-color: unset;
+      border: none;
+      border-bottom: 3px solid black;
+    }
+
+    .operations {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    button {
+      background-color: springgreen;
+      border: unset;
+      margin: 5px;
+      font-size: 120%;
+      border-radius: 50%;
+      color: white;
+    }
+
+    .answer {
+      width: 130px;
+      text-align: center;
+    }
+    
+  </style>
+
+  <script>
+
+  function doMath() {
+    const num1 = Number(document.querySelector('.num1').value);
+    const num2 = Number(document.querySelector('.num2').value);
+
+    const add = document.querySelector('.add');
+    const subtract = document.querySelector('.subtract');
+    const multiply = document.querySelector('.multiply');
+    const divide = document.querySelector('.divide');
+
+    const answer = document.querySelector('.answer');
+    const button = document.querySelectorAll('.button');
+
+      const addNumbers = () => {
+        let result = num1 + num2;
+        if (isNaN(result) === true) {
+          answer.innerHTML = "You can't do Math with that!"
+        } else {
+        answer.innerHTML = result;
+        }
+      }
+
+      const subtractNumbers = () => {
+        let result = num1 - num2;
+        if (isNaN(result) === true) {
+          answer.innerHTML = "You can't do Math with that!"
+        } else {
+        answer.innerHTML = result;
+        }
+      }
+      
+      const multiplyNumbers = () => {
+        let result = num1 * num2;
+        if (isNaN(result) === true) {
+          answer.innerHTML = "You can't do Math with that!"
+        } else {
+        answer.innerHTML = result;
+        }
+      }
+
+      const divideNumbers = () => {
+        let result = num1 / num2;
+        if (isNaN(result) === true) {
+          answer.innerHTML = "You can't do Math with that!"
+        } else {
+        answer.innerHTML = result.toFixed(2);
+        }
+      }
+
+      add.addEventListener('click', addNumbers);
+      subtract.addEventListener('click', subtractNumbers);
+      multiply.addEventListener('click', multiplyNumbers);
+      divide.addEventListener('click', divideNumbers);
+  }
+
+  </script>
+</body>
+</html>
